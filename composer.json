@@ -1,0 +1,23 @@
+{
+
+	"bin": [
+ 		 "bin/brain-games"
+	],
+	"license": "MIT",
+	"description": "my first project on hexlet",
+
+    "name": "hexlet/code",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "gaponov.andrey",
+            "email": "mr.nekron@gmail.com"
+        }
+    ],
+    "require": {}
+   
+}
