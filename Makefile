@@ -1,7 +1,4 @@
-setup: install start
-
-
-start:
+brain-games:
 	./bin/brain-games
 
 install:
