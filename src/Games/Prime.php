@@ -30,7 +30,7 @@ function launchPrime()
     line($result);
 }
 
-function isPrime($number): string
+function isPrime(int $number): string
 {
     for ($index = 2; $index < $number; $index++) {
         if ($number % $index == 0) {
