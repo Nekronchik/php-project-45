@@ -37,4 +37,3 @@ function getEvenResult($randomNumber)
         return 'no';
     }
 }
-
