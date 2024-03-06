@@ -10,7 +10,7 @@ use function BrainGames\Engine\startEngine;
 use const BrainGames\Engine\ROUNDS_COUNT;
 
 function launchPrime()
-{   
+{
     $correctAnswer = '';
     $name = welcome();
     line("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");

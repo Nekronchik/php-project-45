@@ -15,8 +15,8 @@ function welcome(): string
     return $name;
 }
 
-function startEngine(string $question,string $correctAnswer): bool
-{   
+function startEngine(string $question, string $correctAnswer): bool
+{
     line("Question: {$question}");
     $playerAnswer = prompt("Your answer");
     if ($playerAnswer === $correctAnswer) {

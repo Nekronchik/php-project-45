@@ -27,7 +27,7 @@ function launchEven()
         }
     }
     line($result);
-}   
+}
 
 function getEvenResult($randomNumber)
 {
@@ -37,3 +37,4 @@ function getEvenResult($randomNumber)
         return 'no';
     }
 }
+

@@ -35,5 +35,4 @@ function launchProg()
         }
     }
     line($result);
-
 }

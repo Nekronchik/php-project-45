@@ -32,7 +32,7 @@ function launchCalc()
             $res = $operator3;
             $result = $randomNumber1 * $randomNumber2;
         }
-        $question = "{$randomNumber1} {$res} {$randomNumber2}"; 
+        $question = "{$randomNumber1} {$res} {$randomNumber2}";
         $correctAnswer = (string)$result;
         $engine = startEngine($question, $correctAnswer);
         if ($engine) {
@@ -42,5 +42,5 @@ function launchCalc()
             break;
         }
     } line($result);
-
 }
+
