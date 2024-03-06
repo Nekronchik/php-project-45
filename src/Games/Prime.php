@@ -13,6 +13,7 @@ function launchPrime()
 {
     $correctAnswer = '';
     $name = welcome();
+    $result = '';
     line("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
     for ($i = 1; $i <= ROUNDS_COUNT; $i += 1) {
         $randomNumber = rand(2, 100);
@@ -29,7 +30,7 @@ function launchPrime()
     line($result);
 }
 
-function isPrime($number)
+function isPrime($number): string
 {
     for ($index = 2; $index < $number; $index++) {
         if ($number % $index == 0) {

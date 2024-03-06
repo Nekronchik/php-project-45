@@ -25,7 +25,7 @@ function launchGcd()
             $randomNumber1 = $randomNumber2;
             $randomNumber2 = $t;
         }
-        $correctAnswer = $randomNumber1;
+        $correctAnswer = (string)$randomNumber1;
         $engine = startEngine($question, $correctAnswer);
         if ($engine) {
             $result = "Congratulations, {$name}!";

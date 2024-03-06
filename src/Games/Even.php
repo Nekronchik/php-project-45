@@ -29,7 +29,7 @@ function launchEven()
     line($result);
 }
 
-function getEvenResult($randomNumber)
+function getEvenResult($randomNumber): string
 {
     if ($randomNumber % 2 === 0) {
         return 'yes';

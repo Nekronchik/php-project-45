@@ -13,6 +13,7 @@ function launchProg()
 {
     $maxElementsCount =  10;
     $name = welcome();
+    $result = '';
     line('What number is missing in the progression?');
     for ($i = 1; $i <= ROUNDS_COUNT; $i += 1) {
         $progression = [];
@@ -23,7 +24,7 @@ function launchProg()
             $x += $stepProgression;
             $progression[] = $x;
         }
-        $correctAnswer = $progression[$randomNumberQuestion];
+        $correctAnswer = (string)$progression[$randomNumberQuestion];
         $progression[$randomNumberQuestion] = '..';
         $question = implode(' ', $progression);
         $engine = startEngine($question, $correctAnswer);
