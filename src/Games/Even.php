@@ -13,7 +13,7 @@ function launchEven()
 {
     $result = '';
     $name = welcome();
-    line("Answer 'yes' if the number is even, otherwise answer 'no'.");
+    line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
     for ($i = 1; $i <= ROUNDS_COUNT; $i += 1) {
         $randomNumber = rand(1, 15);
         $question = (string)$randomNumber;
