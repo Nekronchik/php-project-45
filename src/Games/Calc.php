@@ -36,7 +36,7 @@ function launchCalc()
         $correctAnswer = (string)$result;
         $engine = startEngine($question, $correctAnswer);
         if ($engine) {
-            $result = "Congratulation, {$name}";
+            $result = "Congratulation, {$name}!";
         } else {
             $result = "Let's try again, {$name}!";
             break;

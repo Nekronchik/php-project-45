@@ -23,7 +23,7 @@ function startEngine(string $question,string $correctAnswer): bool
         line("Correct!");
         return true;
     } else {
-        line("'{$playerAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'");
+        line("'{$playerAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
         return false;
     }
 }
