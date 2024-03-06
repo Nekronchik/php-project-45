@@ -15,8 +15,8 @@ function launchPrime()
     $name = welcome();
     line("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
     for ($i = 1; $i <= ROUNDS_COUNT; $i += 1) {
-        $randomNumber = rand(1, 100);
-        if ($randomNumber % 2 === 0 || $randomNumber % 3 === 0 || $randomNumber % 5 === 0 || $randomNumber % 7 === 0) {
+        $randomNumber = rand(1, 1);
+        if ($randomNumber % 2 === 0 || $randomNumber % 3 === 0 || $randomNumber % 5 === 0 || $randomNumber % 7 === 0 || $randomNumber === 1) {
             $correctAnswer = 'no';
         } else {
             $correctAnswer = 'yes';
