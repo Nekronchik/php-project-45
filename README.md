@@ -4,10 +4,25 @@
 <a href="https://codeclimate.com/github/Nekronchik/php-project-45/maintainability"><img src="https://api.codeclimate.com/v1/badges/d1382d82f3857ead19b3/maintainability" /></a>
 
 ### Клонировать игру
-> '''git clone git@github.com:Nekronchik/php-project-45.git'''
+> git clone git@github.com:Nekronchik/php-project-45.git
 
 ### Установка игры
-> '''make install'''
+> make install
+
+### Запуск игры Brain-even
+> make brain-even
+
+### Запуск игры Brain-calc
+> make brain-calc
+
+### Запуск игры Brain-gcd
+> make brain-gcd
+
+### Запуск игры Brain-progression
+> make brain-progression
+
+### Запуск игры Brain-prime
+> make brain-prime
 
 ## asciinema recodings:
 
@@ -19,4 +34,4 @@
 
 * ### [brain-progression](https://asciinema.org/a/S2sr9efDTzHBZVbASB2FLuSrX)
 
-* ### [brain-prime](https://asciinema.org/a/Wg4wZKX3qAR8yewbPF1U5EIiU)
+* ### [brain-prime](https://asciinema.org/a/Wg4wZKX3qAR8yewbPF1U5EIiUgit)
