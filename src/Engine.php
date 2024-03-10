@@ -16,7 +16,7 @@ function run(array $gameData, string $task)
     foreach ($gameData as $key => $value) {
         line("Question: {$key}");
         $playerAnswer = prompt("Your answer");
-        if ($playerAnswer !== $value) {
+        if ($playerAnswer != $value) {
             line("'{$playerAnswer}' is wrong answer ;(. Correct answer was '{$value}'.");
             line("Let's try again, {$name}!");
             return;
