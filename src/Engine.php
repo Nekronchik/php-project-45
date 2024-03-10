@@ -23,6 +23,6 @@ function run(array $gameData, string $task)
         } else {
             line("Correct!");
         }
-        line("Congratulation, {$name}!");
+        line("Congratulations, {$name}!");
     }
 }
