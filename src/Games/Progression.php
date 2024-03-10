@@ -11,7 +11,7 @@ function runProg()
     $maxElementsCount = 10;
     $gameData = [];
     $task = 'What number is missing in the progression?';
-    for ($i = 1; $i <= ROUNDS_COUNT; $i += 1) {
+    for ($i = 0; $i <= ROUNDS_COUNT; $i += 1) {
         $progression = [];
         $startProgression = rand(1, 50);
         $stepProgression = rand(1, 10);
