@@ -19,7 +19,7 @@ function runPrime()
         } else {
             $correctAnswer = 'no';
         }
-        $gameData[$randomNumber] = $correctAnswer;       
+        $gameData[$randomNumber] = $correctAnswer;
     }
     run($gameData, $task);
 }
