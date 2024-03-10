@@ -2,38 +2,21 @@
 
 namespace BrainGames\Games\Even;
 
-use function cli\line;
-use function cli\prompt;
-use function BrainGames\Engine\welcome;
-use function BrainGames\Engine\startEngine;
+use function BrainGames\Engine\run;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
-function launchEven()
+function runEven()
 {
-    $result = '';
-    $name = welcome();
-    line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
+    $gameData = [];
+    $task = 'Answer "yes" if the number is even, otherwise answer "no".';
     for ($i = 1; $i <= ROUNDS_COUNT; $i += 1) {
         $randomNumber = rand(1, 15);
-        $question = (string)$randomNumber;
-        $correctAnswer = getEvenResult($randomNumber);
-        $engine = startEngine($question, $correctAnswer);
-        if ($engine) {
-            $result = "Congratulations, {$name}!";
+        if ($randomNumber % 2 == 0) {
+            $gameData[$randomNumber] = 'yes';
         } else {
-            $result = "Let's try again, {$name}!";
-            break;
+            $gameData[$randomNumber] = 'no';
         }
     }
-    line($result);
-}
-
-function getEvenResult(int $randomNumber): string
-{
-    if ($randomNumber % 2 === 0) {
-        return 'yes';
-    } else {
-        return 'no';
-    }
+    run($gameData, $task);
 }

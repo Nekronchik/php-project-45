@@ -2,40 +2,34 @@
 
 namespace BrainGames\Games\Prime;
 
-use function cli\line;
-use function cli\prompt;
-use function BrainGames\Engine\welcome;
-use function BrainGames\Engine\startEngine;
+use function BrainGames\Engine\run;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
-function launchPrime()
+function runPrime()
 {
+    $gameData = [];
+    $task = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";
     $correctAnswer = '';
-    $name = welcome();
-    $result = '';
-    line("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
     for ($i = 1; $i <= ROUNDS_COUNT; $i += 1) {
         $randomNumber = rand(2, 100);
-        $question = "{$randomNumber}";
-        $correctAnswer = isPrime($randomNumber);
-        $engine = startEngine($question, $correctAnswer);
-        if ($engine) {
-            $result = "Congratulations, {$name}!";
+        $flag = isPrime($randomNumber);
+        if ($flag == true) {
+            $correctAnswer = 'yes';
         } else {
-            $result = "Let's try again, {$name}!";
-            break;
+            $correctAnswer = 'no';
         }
+        $gameData[$randomNumber] = $correctAnswer;       
     }
-    line($result);
+    run($gameData, $task);
 }
 
-function isPrime(int $number): string
+function isPrime($number)
 {
-    for ($index = 2; $index < $number; $index++) {
-        if ($number % $index == 0) {
-            return $correctAnswer = 'no';
+    for ($i = 2; $i < $number; $i += 1) {
+        if ($number % $i == 0) {
+            return false;
         }
     }
-    return $correctAnswer = 'yes';
+    return true;
 }
