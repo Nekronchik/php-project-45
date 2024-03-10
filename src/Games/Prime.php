@@ -24,7 +24,7 @@ function runPrime()
     run($gameData, $task);
 }
 
-function isPrime($number)
+function isPrime(int $number)
 {
     for ($i = 2; $i < $number; $i += 1) {
         if ($number % $i == 0) {
