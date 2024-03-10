@@ -20,7 +20,7 @@ function runGcd()
             $randomNumber1 = $randomNumber2;
             $randomNumber2 = $t;
         }
-        $gameData[$question] = (string)$randomNumber1;
+        $gameData[] = ['question' => $question, 'correctAnswer' => (string)$randomNumber1];
     }
     run($gameData, $task);
 }

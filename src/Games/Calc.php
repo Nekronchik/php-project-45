@@ -15,13 +15,13 @@ function runCalc()
         $randomNumber2 = rand(1, 15);
         switch (mt_rand(1, 3)) {
             case 1:
-                $gameData["$randomNumber1 - $randomNumber2"] = $randomNumber1 - $randomNumber2;
+                $gameData[] = ['question' => "$randomNumber1 - $randomNumber2", 'correctAnswer' => $randomNumber1 - $randomNumber2];
                 break;
             case 2:
-                $gameData["$randomNumber1 + $randomNumber2"] = $randomNumber1 + $randomNumber2;
+                $gameData[] = ['question' => "$randomNumber1 + $randomNumber2", 'correctAnswer' => $randomNumber1 + $randomNumber2];
                 break;
             case 3:
-                $gameData["$randomNumber1 + $randomNumber2"] = $randomNumber1 + $randomNumber2;
+                $gameData[] = ['question' => "$randomNumber1 * $randomNumber2", 'correctAnswer' => $randomNumber1 * $randomNumber2];
                 break;
         }
     }

@@ -13,11 +13,13 @@ function run(array $gameData, string $task)
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line($task);
-    foreach ($gameData as $key => $value) {
-        line("Question: {$key}");
+    foreach ($gameData as $key) {
+        $question = $key['question'];
+        $correctAnswer = $key['correctAnswer'];
+        line("Question: {$question}");
         $playerAnswer = prompt("Your answer");
-        if ($playerAnswer != $value) {
-            line("'{$playerAnswer}' is wrong answer ;(. Correct answer was '{$value}'.");
+        if ($playerAnswer != $correctAnswer) {
+            line("'{$playerAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
             line("Let's try again, {$name}!");
             return;
         } else {
