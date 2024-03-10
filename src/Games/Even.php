@@ -6,7 +6,7 @@ use function BrainGames\Engine\run;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
-function runEven(): void
+function runEven()
 {
     $gameData = [];
     $task = 'Answer "yes" if the number is even, otherwise answer "no".';
