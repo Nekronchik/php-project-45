@@ -22,7 +22,7 @@ function runCalc()
     run($gameData, $task);
 }
 
-function calculate($randomNumber1, $randomNumber2, $randomOperator)
+function calculate(int $randomNumber1, int $randomNumber2, string $randomOperator)
 {
     switch ($randomOperator) {
         case "+":
