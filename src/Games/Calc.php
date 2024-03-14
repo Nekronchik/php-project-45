@@ -5,10 +5,10 @@ namespace BrainGames\Games\Calc;
 use function BrainGames\Engine\run;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
+const DESCRIPTION = 'What is the result of the expression?';
 
 function runCalc()
 {
-    $task = 'What is the result of the expression?';
     $gameData = [];
     for ($i = 1; $i <= ROUNDS_COUNT; $i += 1) {
         $operators = ['+', '-', '*'];
@@ -19,17 +19,19 @@ function runCalc()
         $correctAnswer = calculate($randomNumber1, $randomNumber2, $randomOperator);
         $gameData[] = ['question' => $question, 'correctAnswer' => $correctAnswer];
     }
-    run($gameData, $task);
+    run($gameData, DESCRIPTION);
 }
 
-function calculate(int $randomNumber1, int $randomNumber2, string $randomOperator)
+function calculate(int $num1, int $num2, string $operator)
 {
-    switch ($randomOperator) {
+    switch ($operator) {
         case "+":
-            return $randomNumber1 + $randomNumber2;
+            return $num1 + $num2;
         case "-":
-            return $randomNumber1 - $randomNumber2;
+            return $num1 - $num2;
         case "*":
-            return $randomNumber1 * $randomNumber2;
+            return $num1 * $num2;
+        default:
+            return "Incorrect sign: '{$operator}'";
     }
 }

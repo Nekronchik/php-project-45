@@ -7,19 +7,19 @@ use function cli\prompt;
 
 const ROUNDS_COUNT = 3;
 
-function run(array $gameData, string $task)
+function run(array $gameData, string $description)
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    line($task);
-    foreach ($gameData as $key) {
-        $question = $key['question'];
-        $correctAnswer = $key['correctAnswer'];
+    line($description);
+    foreach ($gameData as $round) {
+        $question = $round['question'];
+        $correctAnswer = $round['correctAnswer'];
         line("Question: {$question}");
-        $playerAnswer = prompt("Your answer");
-        if ($playerAnswer != $correctAnswer) {
-            line("'{$playerAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
+        $answer = prompt("Your answer");
+        if ($answer != $correctAnswer) {
+            line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
             line("Let's try again, {$name}!");
             return;
         } else {

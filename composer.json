@@ -1,6 +1,6 @@
 {
     "name": "hexlet/code",
-	"description": "Brain games - a set of five console games, built on the principle of popular mobile applications for pumping up the brain",
+    "description": "Brain games - a set of five console games, built on the principle of popular mobile applications for pumping up the brain",
     "license": "MIT",
     "autoload": {
         "files": [
@@ -20,7 +20,7 @@
         "bin/brain-gcd",
         "bin/brain-progression",
         "bin/brain-prime"
-   ],
+    ],
     "authors": [
         {
             "name": "gaponov.andrey",
