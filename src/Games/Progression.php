@@ -5,6 +5,7 @@ namespace BrainGames\Games\Progression;
 use function BrainGames\Engine\run;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
+
 const DESCRIPTION = 'What number is missing in the progression?';
 
 function runProg()

@@ -5,6 +5,7 @@ namespace BrainGames\Games\Calc;
 use function BrainGames\Engine\run;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
+
 const DESCRIPTION = 'What is the result of the expression?';
 
 function runCalc()

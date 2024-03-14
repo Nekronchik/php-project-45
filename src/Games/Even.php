@@ -5,6 +5,7 @@ namespace BrainGames\Games\Even;
 use function BrainGames\Engine\run;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
+
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function runEven()
@@ -14,7 +15,6 @@ function runEven()
         $randomNumber = random_int(1, 15);
         $correctAnswer = isEven($randomNumber) ? 'yes' : 'no';
         $gameData[] = ['question' => $randomNumber, 'correctAnswer' => $correctAnswer];
-        
     }
     run($gameData, DESCRIPTION);
 }
