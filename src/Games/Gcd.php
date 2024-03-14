@@ -14,11 +14,11 @@ function runGcd()
     $gameData = [];
     $t = 0;
     for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
-        $randomNumber1 = rand(1, 15);
-        $randomNumber2 = rand(1, 15);
+        $randomNumber1 = rand(2, 5);
+        $randomNumber2 = rand(2, 5);
         $question = "{$randomNumber1} {$randomNumber2}";
         $correctAnswer = findGcd($randomNumber1, $randomNumber2);
-        $gameData[] = ['question' => $question, 'correctAnswer' => (string)$randomNumber1];
+        $gameData[] = ['question' => $question, 'correctAnswer' => (string)$correctAnswer];
     }
     run($gameData, DESCRIPTION);
 }
