@@ -17,7 +17,7 @@ function runProg()
         $correctAnswer = (string)$progression[$randomNumberQuestion];
         $progression[$randomNumberQuestion] = '..';
         $question = implode(' ', $progression);
-        $gameData[] = ['question' => $question, 'correctAnswer' => $correctAnswer];
+        $gameData[] = [$question, $correctAnswer];
     }
     run($gameData, DESCRIPTION);
 }

@@ -18,7 +18,7 @@ function runCalc()
         $randomOperator = $operators[array_rand($operators, 1)];
         $question = "{$randomNumber1} {$randomOperator} {$randomNumber2}";
         $correctAnswer = calculate($randomNumber1, $randomNumber2, $randomOperator);
-        $gameData[] = ['question' => $question, 'correctAnswer' => $correctAnswer];
+        $gameData[] = [$question, $correctAnswer];
     }
     run($gameData, DESCRIPTION);
 }

@@ -13,9 +13,7 @@ function run(array $gameData, string $description)
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     line($description);
-    foreach ($gameData as $round) {
-        $question = $round['question'];
-        $correctAnswer = $round['correctAnswer'];
+    foreach ($gameData as [$question, $correctAnswer]) {
         line("Question: {$question}");
         $answer = prompt("Your answer");
         if ($answer != $correctAnswer) {

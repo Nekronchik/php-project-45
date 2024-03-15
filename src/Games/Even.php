@@ -14,7 +14,7 @@ function runEven()
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $randomNumber = random_int(1, 15);
         $correctAnswer = isEven($randomNumber) ? 'yes' : 'no';
-        $gameData[] = ['question' => $randomNumber, 'correctAnswer' => $correctAnswer];
+        $gameData[] = [$randomNumber, $correctAnswer];
     }
     run($gameData, DESCRIPTION);
 }

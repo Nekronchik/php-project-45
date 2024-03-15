@@ -16,7 +16,7 @@ function runPrime()
         $randomNumber = rand(2, 100);
         $flag = isPrime($randomNumber);
         $correctAnswer = getAnswer($flag);
-        $gameData[] = ['question' => $randomNumber, 'correctAnswer' => $correctAnswer];
+        $gameData[] = [$randomNumber, $correctAnswer];
     }
     run($gameData, DESCRIPTION);
 }
