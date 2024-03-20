@@ -6,7 +6,9 @@ use function BrainGames\Engine\runGame;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
-class MyException extends \Exception {}
+class MyException extends \Exception
+{
+}
 
 const DESCRIPTION = 'What is the result of the expression?';
 
@@ -35,6 +37,6 @@ function calculate(int $num1, int $num2, string $operator)
         case "*":
             return $num1 * $num2;
         default:
-            throw new Exception("Incorrect sign: '{$operator}'");
+            throw new \Exception("Incorrect sign: '{$operator}'");
     }
 }
