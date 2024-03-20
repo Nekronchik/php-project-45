@@ -12,7 +12,7 @@ function run()
 {
     $gameData = [];
     for ($i = 1; $i <= ROUNDS_COUNT; $i += 1) {
-        $operators = ['/'];
+        $operators = ['+', '-', '*'];
         $randomNumber1 = rand(1, 15);
         $randomNumber2 = rand(1, 15);
         $randomOperator = $operators[array_rand($operators, 1)];
