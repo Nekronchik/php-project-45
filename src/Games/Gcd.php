@@ -2,14 +2,14 @@
 
 namespace BrainGames\Games\Gcd;
 
-use function BrainGames\Engine\run;
+use function BrainGames\Engine\runGame;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
 
-function runGcd()
+function run()
 {
     $gameData = [];
     $t = 0;
@@ -20,7 +20,7 @@ function runGcd()
         $correctAnswer = findGcd($randomNumber1, $randomNumber2);
         $gameData[] = [$question, (string)$correctAnswer];
     }
-    run($gameData, DESCRIPTION);
+    runGame($gameData, DESCRIPTION);
 }
 
 function findGcd(int $num1, int $num2)

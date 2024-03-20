@@ -2,17 +2,17 @@
 
 namespace BrainGames\Games\Calc;
 
-use function BrainGames\Engine\run;
+use function BrainGames\Engine\runGame;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
 const DESCRIPTION = 'What is the result of the expression?';
 
-function runCalc()
+function run()
 {
     $gameData = [];
     for ($i = 1; $i <= ROUNDS_COUNT; $i += 1) {
-        $operators = ['+', '-', '*'];
+        $operators = ['/'];
         $randomNumber1 = rand(1, 15);
         $randomNumber2 = rand(1, 15);
         $randomOperator = $operators[array_rand($operators, 1)];
@@ -20,7 +20,7 @@ function runCalc()
         $correctAnswer = calculate($randomNumber1, $randomNumber2, $randomOperator);
         $gameData[] = [$question, $correctAnswer];
     }
-    run($gameData, DESCRIPTION);
+    runGame($gameData, DESCRIPTION);
 }
 
 function calculate(int $num1, int $num2, string $operator)
@@ -33,6 +33,6 @@ function calculate(int $num1, int $num2, string $operator)
         case "*":
             return $num1 * $num2;
         default:
-            return "Incorrect sign: '{$operator}'";
+            throw new Exception("Incorrect sign: '{$operator}'");
     }
 }

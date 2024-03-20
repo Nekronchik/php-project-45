@@ -2,13 +2,13 @@
 
 namespace BrainGames\Games\Prime;
 
-use function BrainGames\Engine\run;
+use function BrainGames\Engine\runGame;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function runPrime()
+function run()
 {
     $gameData = [];
     $correctAnswer = '';
@@ -18,7 +18,7 @@ function runPrime()
         $correctAnswer = getAnswer($flag);
         $gameData[] = [$randomNumber, $correctAnswer];
     }
-    run($gameData, DESCRIPTION);
+    runGame($gameData, DESCRIPTION);
 }
 
 function isPrime(int $num)
