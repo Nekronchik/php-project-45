@@ -6,6 +6,8 @@ use function BrainGames\Engine\runGame;
 
 use const BrainGames\Engine\ROUNDS_COUNT;
 
+class MyException extends Exception {}
+
 const DESCRIPTION = 'What is the result of the expression?';
 
 function run()
