@@ -14,8 +14,7 @@ function run()
     $correctAnswer = '';
     for ($i = 0; $i < ROUNDS_COUNT; $i += 1) {
         $randomNumber = rand(2, 100);
-        $flag = isPrime($randomNumber);
-        $correctAnswer = getAnswer($flag);
+        $correctAnswer = isPrime($randomNumber) ? 'yes' : 'no';
         $gameData[] = [$randomNumber, $correctAnswer];
     }
     runGame($gameData, DESCRIPTION);
@@ -29,9 +28,4 @@ function isPrime(int $num)
         }
     }
     return true;
-}
-
-function getAnswer(bool $flag)
-{
-    return ($flag) ? 'yes' : 'no';
 }
